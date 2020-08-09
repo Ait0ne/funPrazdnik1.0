@@ -4,7 +4,7 @@ import Portfolio from '../components/Portfolio/portfolio.component';
 import {PortfolioPageContainer} from '../styles/containers/containers.styles';
 import {API_URL} from '../api_config';
 import Select from '../components/Select/select.component';
-import {EventProps} from './PortfolioEvent';
+import {EventProps} from './portfolioEvent';
 import Fallback from '../components/Fallback/fallback.component';
 
 const PortfolioPage: React.FC = () => {
