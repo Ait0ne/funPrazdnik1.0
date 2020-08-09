@@ -2,11 +2,12 @@ const express = require('express');
 const path = require('path');
 const compression = require('compression');
 const enforce = require('express-sslify');
+// const cors = require('cors')
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+// app.use(cors());
 
 if(process.env.NODE_ENV === 'production'){
     app.use(compression())
