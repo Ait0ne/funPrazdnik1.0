@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {PortfolioContainer} from '../../styles/containers/containers.styles';
-import {EventProps} from '../../pages/PortfolioEvent';
+import {EventProps} from '../../pages/portfolioEvent';
 import GalleryItem from '../../components/GalleryItem/galleryItem.component';
 
 export interface PortfolioProps {
