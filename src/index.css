@@ -1,0 +1,85 @@
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#root {
+    /* height:100vh; */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    background-color: #111417;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    font-size: 16px;
+
+}
+
+.carousel {
+    z-index: 0;
+}
+
+.circle-icon {
+    stroke:#e64e04; 
+    stroke-dasharray: 10;
+    
+}
+
+.animated {
+    animation: hover 4s infinite ease-in-out; 
+}
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+
+
+.carousel.slide {
+    width: 100%;
+}
+
+.carousel-indicators li.active {
+    background-color:#e64e04; 
+}
+
+
+@media (max-width: 900px) {
+    .circle-icon {
+        display: none;
+    }
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+}
+
+
+
+@keyframes hover {
+    0% {
+        transform: rotateY(0deg) translate(0px);
+    }
+    50% {
+        transform: rotateY(-5deg) translate(-5px)
+    }
+    100% {
+        transform: rotateY(0deg) translate(0px);
+    }
+};
+
