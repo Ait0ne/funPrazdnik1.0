@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import {faChevronDown} from '@fortawesome/free-solid-svg-icons/faChevronDown';
 
 import Carousel from '../Carousel/carousel.component';
 import MainText from '../MainText/mainText.component';

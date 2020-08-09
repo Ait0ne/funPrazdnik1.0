@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faChevronUp} from '@fortawesome/free-solid-svg-icons';
+import {faChevronUp} from '@fortawesome/free-solid-svg-icons/faChevronUp';
 
 import { FourthSectionContainer } from '../../styles/containers/containers.styles';
 import ContactForm from '../ContactForm/contactForm.component';

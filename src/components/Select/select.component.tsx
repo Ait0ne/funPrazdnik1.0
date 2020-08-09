@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import {faChevronDown} from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import {motion, AnimatePresence} from 'framer-motion';
 
 import ClickOutside from '../clickOutside/clickOutside.component';

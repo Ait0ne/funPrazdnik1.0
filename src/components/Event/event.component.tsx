@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 
 import {IParty}  from '../../pages/parties'
 import {EventContainer, ImageContainer, EventInfoContainer} from './event.styles'
-// import { API_URL } from '../../api_config'
 import {Button} from '../../styles/buttons/buttons.styles';
 import {EventItemVariants} from '../../framer/variants'; 
 

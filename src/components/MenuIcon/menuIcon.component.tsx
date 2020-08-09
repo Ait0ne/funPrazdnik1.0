@@ -1,6 +1,4 @@
 import React, { FC } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { MenuIconContainer } from '../../styles/elements/elements.styles';
 
@@ -17,7 +15,6 @@ const MenuIcon : FC<MenuIconProps> = ({open, onClick}) => {
             <span></span>
             <span></span>
             <span></span>
-                {/* <FontAwesomeIcon onClick={onClick} style={{cursor: 'pointer', zIndex: 21}} icon={open? faTimes : faBars} size='2x' color='#e64e04'/> */}
         </MenuIconContainer>
     )
 }

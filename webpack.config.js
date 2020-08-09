@@ -1,12 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: "./src/index.tsx",
-    
     output: {
       publicPath: '/',
-      filename: "[name].js",
+      filename: '[name].bundle.js',
       chunkFilename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist')
     },
@@ -21,12 +22,12 @@ module.exports = {
     },
     module: {
       rules: [
-        { test: /\.css$/, use: [ "style-loader", "css-loader"] },
-        { test: /\.scss$/, use: [ "style-loader", "css-loader", "sass-loader"] },
+        { test: /\.css$/,  use: [ "style-loader", "css-loader"] },
+        { test: /\.scss$/, use: [ "style-loader", "css-loader", "sass-loader"],exclude: [/node_modules/, /\.test.tsx?$/ ] },
         { test: /\.tsx?$/, loader: "babel-loader", exclude: [/node_modules/, /\.test.tsx?$/ ] },
         { test: /\.tsx?$/, loader: "ts-loader", exclude: [/node_modules/, /\.test.tsx?$/ ] },
-        { test: /\.svg$/, use: ['@svgr/webpack'] },
-        { test: /\.(png|jpg|gif|jpeg)$/, use: ['file-loader']},
+        { test: /\.svg$/, use: ['@svgr/webpack'],exclude: [/node_modules/, /\.test.tsx?$/ ] },
+        { test: /\.(png|jpg|gif|jpeg)$/,  use: ['file-loader'],exclude: [/node_modules/, /\.test.tsx?$/ ]},
         {
           enforce: "pre",
           test: /\.js$/,
@@ -35,6 +36,8 @@ module.exports = {
       ]
     },
     optimization: {
+      minimizer: [new UglifyJsPlugin()],
+      runtimeChunk: false,
       splitChunks: {
         chunks: "all"
       }
@@ -42,6 +45,7 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
           template: path.join(__dirname, 'public', 'index.html')
-      })
+      }),
+      new BundleAnalyzerPlugin()
     ]
   };

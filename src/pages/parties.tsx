@@ -1,6 +1,6 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import {AnimatePresence} from 'framer-motion';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import {faTimes} from '@fortawesome/free-solid-svg-icons/faTimes';
 
 import AdultPartyImage from '../assets/AdultParty.jpg';
 import ThemePartyImage from '../assets/themeParty.jpeg';
